@@ -11,6 +11,21 @@ cd $OPENNMS_HOME/etc/modules-available
 git clone https://github.com/opennms-config-modules/apc.git
 ----
 
+### Events
+.Install APC events
+[source, bash]
+----
+cd $OPENNMS_HOME/etc/events
+ln -s ../modules-available/dell/events/*.xml .
+----
+
+.Include in eventconf.xml
+[source, xml]
+----
+<event-file>events/apc.bestpower.events.xml</event-file>
+<event-file>events/apc.powernet.events.xml</event-file>
+----
+
 ### Datacollection
 
 .Install datacollection configuration
