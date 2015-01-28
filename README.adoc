@@ -24,6 +24,7 @@ ln -s ../modules-available/dell/events/*.xml .
 ----
 <event-file>events/apc.bestpower.events.xml</event-file>
 <event-file>events/apc.powernet.events.xml</event-file>
+<event-file>events/apc.netbotz.events.xml</event-file>
 ----
 
 ### Datacollection
@@ -39,6 +40,7 @@ ln -s ../modules-available/apc/datacollection/*.xml .
 [source, xml]
 ----
 <include-collection dataCollectionGroup="APC-UPS"/>
+<include-collection dataCollectionGroup="APC-Netbotz"/>
 ----
 
 ### Graph report definitions
