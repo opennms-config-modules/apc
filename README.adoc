@@ -16,7 +16,7 @@ git clone https://github.com/opennms-config-modules/apc.git
 [source, bash]
 ----
 cd $OPENNMS_HOME/etc/events
-ln -s ../modules-available/dell/events/*.xml .
+ln -s ../modules-available/apc/events/*.xml .
 ----
 
 .Include in eventconf.xml
