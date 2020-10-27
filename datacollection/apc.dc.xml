@@ -14,10 +14,28 @@
         <mibObj oid=".1.3.6.1.4.1.318.1.1.1.4.2.3" instance="0" alias="apcload" type="gauge32"/>
         <mibObj oid=".1.3.6.1.4.1.318.1.1.1.4.2.4" instance="0" alias="apccurrent" type="gauge32"/>
         <mibObj oid=".1.3.6.1.4.1.318.1.1.1.3.2.1" instance="0" alias="apcinvac" type="gauge32"/>
+        <mibObj oid=".1.3.6.1.4.1.318.1.1.1.2.1.1" instance="0" alias="apcbattstat" type="integer" />
+        <mibObj oid=".1.3.6.1.4.1.318.1.1.1.2.2.4" instance="0" alias="apcbattrepl" type="integer" />
+        <mibObj oid=".1.3.6.1.4.1.318.1.1.1.2.2.5" instance="0" alias="apcbattcount" type="integer" />
+        <mibObj oid=".1.3.6.1.4.1.318.1.1.1.2.2.6" instance="0" alias="apcbadbatt" type="integer" />
+        <mibObj oid=".1.3.6.1.4.1.318.1.1.1.4.1.1" instance="0" alias="apcstatus" type="integer" />
+    </group>
+    <group name="APC-StatusProbe" ifType="all">
+        <mibObj oid=".1.3.6.1.4.1.318.1.1.10.2.3.2.1.2" instance="apcAmbientTemp" alias="iemProbeName" type="string" />
+        <mibObj oid=".1.3.6.1.4.1.318.1.1.10.2.3.2.1.4" instance="apcAmbientTemp" alias="iemProbeCurrTemp" type="gauge32" />
+        <mibObj oid=".1.3.6.1.4.1.318.1.1.10.2.3.2.1.5" instance="apcAmbientTemp" alias="iemProbeTempUnits" type="integer" />
+        <mibObj oid=".1.3.6.1.4.1.318.1.1.10.2.3.2.1.6" instance="apcAmbientTemp" alias="iemProbeCurrHumid" type="gauge32" />
+        <mibObj oid=".1.3.6.1.4.1.318.1.1.10.2.3.2.1.7" instance="apcAmbientTemp" alias="iemProbeHighTempV" type="integer" />
+        <mibObj oid=".1.3.6.1.4.1.318.1.1.10.2.3.2.1.8" instance="apcAmbientTemp" alias="iemProbeLowTempV" type="integer" />
+        <mibObj oid=".1.3.6.1.4.1.318.1.1.10.2.3.2.1.9" instance="apcAmbientTemp" alias="iemProbeHighHumidV" type="integer" />
+        <mibObj oid=".1.3.6.1.4.1.318.1.1.10.2.3.2.1.10" instance="apcAmbientTemp" alias="iemProbeLowHumidV" type="integer" />
+        <mibObj oid=".1.3.6.1.4.1.318.1.1.10.2.3.2.1.11" instance="apcAmbientTemp" alias="iemProbeMaxTempV" type="integer" />
+        <mibObj oid=".1.3.6.1.4.1.318.1.1.10.2.3.2.1.12" instance="apcAmbientTemp" alias="iemProbeMinTempV" type="integer" />
+        <mibObj oid=".1.3.6.1.4.1.318.1.1.10.2.3.2.1.13" instance="apcAmbientTemp" alias="iemProbeMaxHumidV" type="integer" />
+        <mibObj oid=".1.3.6.1.4.1.318.1.1.10.2.3.2.1.14" instance="apcAmbientTemp" alias="iemProbeMinHumidV" type="integer" />
     </group>
     <group name="APC-RackPDU" ifType="all">
-        <mibObj oid=".1.3.6.1.4.1.318.1.1.12.2.3.1.1.2" instance="rPDULoadStatusIndex" alias="rPDULoadStatusLoad"
-                type="Gauge"/>
+        <mibObj oid=".1.3.6.1.4.1.318.1.1.12.2.3.1.1.2" instance="rPDULoadStatusIndex" alias="rPDULoadStatusLoad" type="Gauge"/>
     </group>
     <group name="APC-RackPDU2" ifType="ignore">
         <mibObj oid=".1.3.6.1.4.1.318.1.1.26.11.2" instance="0" alias="rPDU2TotalPower" type="Gauge32"/>
@@ -28,6 +46,7 @@
         <sysoidMask>.1.3.6.1.4.1.318.</sysoidMask>
         <collect>
             <includeGroup>APC</includeGroup>
+            <includeGroup>APC-StatusProbe</includeGroup>
             <includeGroup>APC-RackPDU</includeGroup>
             <includeGroup>APC-RackPDU2</includeGroup>
             <includeGroup>mib2-ups-rfc1628</includeGroup>
