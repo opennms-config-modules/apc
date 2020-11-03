@@ -1,4 +1,4 @@
-<datacollection-group xmlns="https://xmlns.opennms.org/xsd/config/datacollection" name="APC-UPS">
+<datacollection-group xmlns="https://xmlns.opennms.org/xsd/config/datacollection" name="APC">
     <!-- APC Resource Types -->
     <resourceType name="rPDULoadStatusIndex" label="APC PDU Amp current">
         <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
