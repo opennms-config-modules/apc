@@ -39,7 +39,7 @@ cp ${HOME}/opennms-config-workspace/apc/datacollection/*.xml ${OPENNMS_HOME}/etc
 .Include in datacollection-config.xml
 [source, xml]
 ----
-<include-collection dataCollectionGroup="APC-UPS"/>
+<include-collection dataCollectionGroup="APC"/>
 <include-collection dataCollectionGroup="APC-Netbotz"/>
 ----
 
