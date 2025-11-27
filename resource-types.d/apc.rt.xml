@@ -1,0 +1,6 @@
+<resource-types>
+    <resourceType name="rPDULoadStatusIndex" label="APC PDU Amp current">
+        <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+        <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+    </resourceType>
+</resource-types>
